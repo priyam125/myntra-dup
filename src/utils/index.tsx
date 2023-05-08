@@ -575,47 +575,47 @@ export const collections = [
       },
     },
   },
-  {
-    id: 120,
-    slug: "saree-aqua-blue-floral-print-poly-georgette-a6117-buy-120",
-    code: "A6117-blue-Free_Size",
-    productId: 83,
-    name: "Aqua Blue Poly Georgette Saree With Blouse Piece",
-    description: '"Color : Aqua Blue  Fabric : Poly Georgette Blouse : Yes"',
-    blouseAttached: true,
-    blouseFabric: "poly-georgette",
-    sareeFabric: "poly-georgette",
-    mrp: 1517,
-    listingPrice: 1110,
-    discount: 27,
-    isActive: true,
-    isAvailable: true,
-    supplierId: 59,
-    supplierName: "Misri Fashion",
-    availableQty: 12,
-    primaryImage: {
-      jpegImages: {
-        lImage:
-          "https://d2mg89328eg065.cloudfront.net/optimized_media/160/l_1A2311H.jpeg",
-        mImage:
-          "https://d2mg89328eg065.cloudfront.net/optimized_media/160/m_1A2311H.jpeg",
-        sImage:
-          "https://d2mg89328eg065.cloudfront.net/optimized_media/160/s_1A2311H.jpeg",
-        xsImage:
-          "https://d2mg89328eg065.cloudfront.net/optimized_media/160/xs_1A2311H.jpeg",
-      },
-      webpImages: {
-        lImage:
-          "https://d2mg89328eg065.cloudfront.net/optimized_media/160/l_1A2311H.webp",
-        mImage:
-          "https://d2mg89328eg065.cloudfront.net/optimized_media/160/m_1A2311H.webp",
-        sImage:
-          "https://d2mg89328eg065.cloudfront.net/optimized_media/160/s_1A2311H.webp",
-        xsImage:
-          "https://d2mg89328eg065.cloudfront.net/optimized_media/160/xs_1A2311H.webp",
-      },
-    },
-  },
+  // {
+  //   id: 120,
+  //   slug: "saree-aqua-blue-floral-print-poly-georgette-a6117-buy-120",
+  //   code: "A6117-blue-Free_Size",
+  //   productId: 83,
+  //   name: "Aqua Blue Poly Georgette Saree With Blouse Piece",
+  //   description: '"Color : Aqua Blue  Fabric : Poly Georgette Blouse : Yes"',
+  //   blouseAttached: true,
+  //   blouseFabric: "poly-georgette",
+  //   sareeFabric: "poly-georgette",
+  //   mrp: 1517,
+  //   listingPrice: 1110,
+  //   discount: 27,
+  //   isActive: true,
+  //   isAvailable: true,
+  //   supplierId: 59,
+  //   supplierName: "Misri Fashion",
+  //   availableQty: 12,
+  //   primaryImage: {
+  //     jpegImages: {
+  //       lImage:
+  //         "https://d2mg89328eg065.cloudfront.net/optimized_media/160/l_1A2311H.jpeg",
+  //       mImage:
+  //         "https://d2mg89328eg065.cloudfront.net/optimized_media/160/m_1A2311H.jpeg",
+  //       sImage:
+  //         "https://d2mg89328eg065.cloudfront.net/optimized_media/160/s_1A2311H.jpeg",
+  //       xsImage:
+  //         "https://d2mg89328eg065.cloudfront.net/optimized_media/160/xs_1A2311H.jpeg",
+  //     },
+  //     webpImages: {
+  //       lImage:
+  //         "https://d2mg89328eg065.cloudfront.net/optimized_media/160/l_1A2311H.webp",
+  //       mImage:
+  //         "https://d2mg89328eg065.cloudfront.net/optimized_media/160/m_1A2311H.webp",
+  //       sImage:
+  //         "https://d2mg89328eg065.cloudfront.net/optimized_media/160/s_1A2311H.webp",
+  //       xsImage:
+  //         "https://d2mg89328eg065.cloudfront.net/optimized_media/160/xs_1A2311H.webp",
+  //     },
+  //   },
+  // },
   {
     id: 249,
     slug: "saree-sunshine-yellow-brasso-a6229-buy-249",
@@ -741,4 +741,12 @@ export const product = {
         "https://d2mg89328eg065.cloudfront.net/optimized_media/300/xs_1A3198H.webp",
     },
   },
+};
+
+export const calculateDiscountPercentage = (
+  mrp: number,
+  listingPrice: number
+) => {
+  const discount = mrp - listingPrice;
+  return Math.round((discount / mrp) * 100);
 };
